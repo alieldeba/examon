@@ -11,12 +11,12 @@ export default function Navbar() {
   const navigation = [
     { title: "Exams", path: "/exams" },
     { title: "Teachers", path: "/teachers" },
-    { title: "leaderboard", path: "/leaderboard" },
+    { title: "Leaderboard", path: "/leaderboard" },
   ];
 
   return (
     <nav
-      className={`bg-white pb-5 md:text-sm ${
+      className={`pb-5 md:text-sm z-50 ${
         state
           ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
           : ""
@@ -81,14 +81,17 @@ export default function Navbar() {
             })}
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <Link href="/" className="block text-gray-700 hover:text-gray-900">
+            <Link
+              href="/login"
+              className="block text-gray-700 hover:text-gray-900"
+            >
               Log in
             </Link>
             <Link
-              href="/"
+              href="/register"
               className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
-              Sign in
+              Register
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"

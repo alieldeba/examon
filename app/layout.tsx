@@ -20,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={rubik.className}>
         <Navbar />
-        {children}
+        <main className="max-w-screen-xl px-4 md:px-8 m-auto w-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
