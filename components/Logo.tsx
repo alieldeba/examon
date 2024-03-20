@@ -1,15 +1,17 @@
 import Image from "next/image";
 import React from "react";
 
+interface propsType {
+  width: number;
+  height: number;
+  className?: string;
+}
+
 export default function Logo({
   width,
   height,
   className,
-}: {
-  width: number;
-  height: number;
-  className?: string;
-}) {
+}: propsType) {
   return (
     <Image
       src="https://cdn-icons-png.flaticon.com/512/1043/1043281.png"
