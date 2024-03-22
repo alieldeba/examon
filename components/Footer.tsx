@@ -23,6 +23,20 @@ export default function Footer() {
             >
               @alieldeba
             </Link>
+            ,
+            <Link
+              href="https://github.com/OmarWebDev"
+              className="hover:underline"
+            >
+              @omarkhaled
+            </Link>
+            ,
+            <Link
+              href="https://github.com/Belal-2000"
+              className="hover:underline"
+            >
+              @belalibrahim
+            </Link>
           </p>
         </div>
       </footer>
