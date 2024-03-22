@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`pb-5 md:text-sm z-50 ${
+      className={`md:text-sm z-50 border-b ${
         state
           ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
           : ""
