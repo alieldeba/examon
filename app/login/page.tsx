@@ -117,8 +117,8 @@ export default function page() {
             </Button>
           </div>
           <div className="relative">
-            <span className="block w-full h-px bg-gray-300"></span>
-            <p className="inline-block w-fit text-sm bg-white px-2 absolute -top-2 inset-x-0 mx-auto">
+            <span className="block w-full h-px bg-gray-300 dark:bg-slate-500"></span>
+            <p className="inline-block w-fit text-sm bg-background px-2 absolute -top-2 inset-x-0 mx-auto">
               Or continue with
             </p>
           </div>

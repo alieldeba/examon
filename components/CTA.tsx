@@ -19,10 +19,10 @@ function CTA() {
             <h3 className="text-indigo-600 font-semibold">
               Professional services
             </h3>
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <p className="text-3xl font-semibold sm:text-4xl">
               Build your SaaS solution with help from our experts
             </p>
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
               cupidatat non proident, sunt in culpa qui officia deserunt mollit

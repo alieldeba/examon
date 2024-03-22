@@ -17,7 +17,7 @@ function Hero() {
       </div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48">
         <div className="hidden sm:mb-5 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          <div className="relative rounded-full px-3 py-1 text-sm leading-6 border dark:border-slate-600">
             This project is open source on github.{" "}
             <Link
               href="https://github.com/alieldeba/examon"
@@ -30,10 +30,10 @@ function Hero() {
           </div>
         </div>
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Data to enrich your online business
           </h1>
-          <p className="mt-3 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-muted-foreground">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
             fugiat aliqua.
