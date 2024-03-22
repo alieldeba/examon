@@ -15,29 +15,6 @@ export default function Footer() {
             asperiores reiciendis. Enim dolorum nemo aliquam libero quas illo
             consequuntur provident quae!
           </p>
-          <p className="text-sm mt-3">
-            Made with ❤️ By{" "}
-            <Link
-              href="https://github.com/alieldeba"
-              className="hover:underline"
-            >
-              @alieldeba
-            </Link>
-            ,
-            <Link
-              href="https://github.com/OmarWebDev"
-              className="hover:underline"
-            >
-              @omarkhaled
-            </Link>
-            ,
-            <Link
-              href="https://github.com/Belal-2000"
-              className="hover:underline"
-            >
-              @belalibrahim
-            </Link>
-          </p>
         </div>
       </footer>
     </section>
