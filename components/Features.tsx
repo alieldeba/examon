@@ -132,7 +132,7 @@ function Features() {
             <h3 className="text-3xl font-semibold sm:text-4xl">
               Let’s help power your SaaS
             </h3>
-            <p className="mt-3">
+            <p className="mt-3 text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               congue, nisl eget molestie varius, enim ex faucibus purus.
             </p>
@@ -148,10 +148,7 @@ function Features() {
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, idx) => (
-              <li
-                key={idx}
-                className="space-y-3 p-4 border rounded-lg"
-              >
+              <li key={idx} className="space-y-3 p-4 border rounded-lg">
                 <div className="text-indigo-600 pb-3">{item.icon}</div>
                 <h4 className="text-lg font-semibold">{item.title}</h4>
                 <p>{item.desc}</p>
