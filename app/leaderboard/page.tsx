@@ -7,6 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { User } from "@/interfaces/user";
 
 function page() {
   const users: User[] = [
