@@ -7,14 +7,10 @@ interface propsType {
   className?: string;
 }
 
-export default function Logo({
-  width,
-  height,
-  className,
-}: propsType) {
+export default function Logo({ width, height, className }: propsType) {
   return (
     <Image
-      src="https://cdn-icons-png.flaticon.com/512/1043/1043281.png"
+      src="https://cdn-icons-png.flaticon.com/256/5564/5564715.png"
       className={className}
       width={width}
       height={height}
