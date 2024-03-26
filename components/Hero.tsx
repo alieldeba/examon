@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
           }}
         ></div>
       </div>
-      <div className="mx-auto max-w-2xl py-32 sm:py-48">
+      <div className="mx-auto max-w-2xl py-32 sm:py-44">
         <div className="hidden sm:mb-5 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 border dark:border-slate-600">
             This project is open source on github.{" "}
@@ -39,11 +40,8 @@ function Hero() {
             fugiat aliqua.
           </p>
           <div className="mt-5 flex items-center justify-center gap-x-6">
-            <Link
-              href="/exams"
-              className="rounded-md px-24 shadow-sm bg-indigo-600 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Get started
+            <Link href="/exams">
+              <Button className="px-24 active:transform">Get started</Button>
             </Link>
           </div>
         </div>

@@ -1,17 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Logo from "./Logo";
-import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [state, setState] = useState(false);
 
   const navigation = [
+    { title: "Dashboard", path: "/dashboard" },
     { title: "Exams", path: "/exams" },
-    { title: "Teachers", path: "/teachers" },
     { title: "Leaderboard", path: "/leaderboard" },
   ];
 
