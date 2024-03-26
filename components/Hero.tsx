@@ -32,12 +32,11 @@ function Hero() {
         </div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-            Data to enrich your online business
+            Make your day with our awesome exams
           </h1>
           <p className="mt-3 text-lg leading-8 text-muted-foreground">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            Empower others by crafting and sharing limitless exams, providing a
+            diverse platform for interactive learning and engaging challenges
           </p>
           <div className="mt-5 flex items-center justify-center gap-x-6">
             <Link href="/exams">
