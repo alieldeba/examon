@@ -8,9 +8,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Examon | Create Your Exam",
+  title: "Examon | Home",
   description:
-    "Create and share unlimited quizzes for others to take, offering a diverse platform for interactive learning and fun challenges.",
+    "Empower others by crafting and sharing limitless exams, providing a diverse platform for interactive learning and engaging challenges.",
 };
 
 export default function RootLayout({
