@@ -1,106 +1,93 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { CircleUser, Menu, Package2, Search } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Logo from "./Logo";
 
 export default function Navbar() {
-  const [state, setState] = useState(false);
-
-  const navigation = [
-    { title: "Dashboard", path: "/dashboard" },
-    { title: "Exams", path: "/exams" },
-    { title: "Leaderboard", path: "/leaderboard" },
+  const links = [
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+    },
+    {
+      name: "Exams",
+      href: "/exams",
+    },
+    {
+      name: "Leaderboard",
+      href: "/leaderboard",
+    },
   ];
 
   return (
-    <nav
-      className={`pb-5 md:text-sm z-50 ${
-        state
-          ? "shadow-lg rounded-xl border-border border-b mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
-          : ""
-      }`}
-    >
-      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-        <div className="flex items-center justify-between py-5 md:block">
-          <Link href="/">
-            <Logo width={40} height={40} />
+    <header className="z-50 sticky top-0 flex h-16 items-center gap-4 border-b bg-background/30 px-4 md:px-14 xl:px-44 backdrop-blur-sm">
+      <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+        <Logo width={30} height={30} />
+        {links.map((link, idx) => (
+          <Link key={idx} href={link.href} className="text-foreground">
+            {link.name}
           </Link>
-          <div className="md:hidden">
-            <button className="menu-btn" onClick={() => setState(!state)}>
-              {state ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              )}
-            </button>
+        ))}
+      </nav>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="shrink-0 md:hidden">
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Toggle navigation menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left">
+          <nav className="grid gap-6 text-lg font-medium">
+            <Logo width={30} height={30} />
+            {links.map((link, idx) => (
+              <Link key={idx} href={link.href} className="text-foreground">
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </SheetContent>
+      </Sheet>
+      <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
+        <form className="ml-auto flex-1 sm:flex-initial">
+          <div className="relative">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="search"
+              placeholder="Search exams..."
+              className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+            />
           </div>
-        </div>
-        <div
-          className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
-            state ? "block" : "hidden"
-          } `}
-        >
-          <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-            {navigation.map((item, idx) => {
-              return (
-                <li key={idx}>
-                  <Link href={item.path} className="block">
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <Link href="/login" className="block">
-              Log in
-            </Link>
-            <Link
-              href="/register"
-              className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium rounded-full md:inline-flex"
-            >
-              Register
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
-        </div>
+        </form>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="secondary" size="icon" className="rounded-full">
+              <CircleUser className="h-5 w-5" />
+              <span className="sr-only">Toggle user menu</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem>Support</DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Logout</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
-    </nav>
+    </header>
   );
 }
