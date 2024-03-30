@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -12,6 +12,18 @@ export const metadata: Metadata = {
   title: "Examon | Home",
   description:
     "Empower others by crafting and sharing limitless exams, providing a diverse platform for interactive learning and engaging challenges.",
+  keywords: [
+    "Exams",
+    "Quiz",
+    "Tasks",
+    "Challenges",
+    "Levels",
+    "Leaderboard",
+    "Dashboard",
+  ],
+  openGraph: {
+    images: "/images/og.png",
+  },
 };
 
 export default function RootLayout({

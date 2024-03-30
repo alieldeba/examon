@@ -1,0 +1,26 @@
+{
+  "name": "Examon",
+  "short_name": "Examon",
+  "description": "Empower others by crafting and sharing limitless exams, providing a diverse platform for interactive learning and engaging challenges.",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1997d5",
+  "background_color": "#1caff6"
+}
