@@ -148,7 +148,10 @@ function Features() {
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, idx) => (
-              <li key={idx} className="space-y-3 p-4 border rounded-lg">
+              <li
+                key={idx}
+                className="space-y-3 p-4 border rounded-lg shadow-[4px_4px_0_#d1d5d9] dark:shadow-[4px_4px_0_#1e293bb8]"
+              >
                 <div className="text-indigo-600 pb-3">{item.icon}</div>
                 <h4 className="text-lg font-semibold">{item.title}</h4>
                 <p>{item.desc}</p>
